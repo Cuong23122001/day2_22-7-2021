@@ -8,13 +8,13 @@ const server = http.createServer((req,res)=>{
     switch(req.url){
         case '/home':
         case '/':
-            res.end('<h1>Home page 2</h1>');
+            res.end('<h1>Home page 2</h1> <p><a href="/about">About page<a> <a href="/help">Help Page<a><p>');
             break;
         case '/about':
-            res.end('<h1>About page</h1>');
+            res.end('<h1>About page</h1> <p> <a href="/">Home page<a>');
             break;
         case '/help':
-            res.end ('<h1>Help Page </h1>' );
+            res.end ('<h1>Help Page </h1><p> <a href="/">Home page<a>' );
             break;
     }
 })
